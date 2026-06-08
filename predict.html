@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Prediction Result</title>
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ background-image: url("/static/images.jpg"); /* Direct URL if url_for isn't working */
+ background-size: cover;
+ margin: 0;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ }
+ .container {
+ background-color: rgba(52, 181, 89, 0.8); /* semi-transparent white */
+ padding: 20px;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ max-width: 400px;
+ width: 100%;
+ backdrop-filter: blur(10px); /* blur effect for the background */
+ text-align: center;
+ }
+ h2 {
+ color: #a61830;
+ margin-bottom: 20px;
+ }
+ p {
+ font-size: 16px;
+ color: #000000;
+ }
+ a {
+ display: inline-block;
+ margin-top: 20px;
+ text-decoration: none;
+ color: #2b00ff;
+ font-size: 16px;
+ }
+ a:hover {
+ text-decoration: underline;
+ }
+ </style>
+</head>
+<body>
+ <div class="container">
+ <h2>Prediction Result</h2>
+ <p>{{ prediction_text }}</p>
+ <h2>THANKYOU FOR VISITING</h2>
+ <h3>visit again</h3>
+ 
+ </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

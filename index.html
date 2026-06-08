@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heart Disease Prediction</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+ background-image: url("{{ url_for('static', filename='download.jpg') }}");
+ background-size: cover;
+ margin: 0;
+ padding: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ }
+ .container {
+ background-color: rgba(1, 101, 222, 0.8); /* semi-transparent white */
+ padding: 15px;
+ border-radius: 10px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ max-width: 400px;
+ width: 100%;
+ backdrop-filter: blur(10px); /* blur effect for the background */
+ }
+ h2 {
+ text-align: center;
+ color: #080808;
+ margin-bottom: 20px;
+  font-weight: bold;
+ }
+ label {
+ font-size: 14px;
+ color: #111010;
+ }
+ input[type="text"],
+ input[type="number"],
+ select {
+ width: 100%;
+ padding: 10px;
+ margin: 8px 0 16px 0;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+  box-sizing: border-box;
+ font-size: 14px;
+}
+ input[type="submit"] {
+ width: 100%;
+ background-color: #28a745;
+ color: rgb(0, 25, 99);
+ padding: 10px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ font-size: 16px;
+}
+ input[type="submit"]:hover {
+ background-color: #218838;
+}
+ </style>
+</head>
+<body>
+ <div class="container">
+ <h2>Heart Disease Prediction</h2>
+ <form action="/predict" method="post">
+ <label for="age">Age:</label>
+ <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+ <label for="bp">Resting Blood Pressure (BP):</label>
+ <input type="number" id="bp" name="bp" placeholder="Enter blood pressure" required>
+
+ <label for="cholesterol">Serum Cholesterol:</label>
+ <input type="number" id="cholesterol" name="cholesterol" placeholder="Enter cholesterol level" required>
+
+ <label for="max_hr">Maximum Heart Rate (Max HR):</label>
+ <input type="number" id="max_hr" name="max_hr" placeholder="Enter maximum heart rate" required>
+
+ <label for="exercise_angina">Exercise-Induced Angina:</label>
+ <select id="exercise_angina" name="exercise_angina" required>
+ <option value="">Select an option</option>
+ <option value="yes">Yes</option>
+ <option value="no">No</option>
+ </select>
+
+ <label for="st_depression">ST Depression Induced by Exercise:</label>
+ <input type="number" id="st_depression" name="st_depression" placeholder="Enter ST depression level" required>
+
+ <label for="num_vessels">Number of Major Vessels (fluro):</label>
+ <input type="number" id="num_vessels" name="num_vessels" placeholder="Enter number of vessels" required>
+
+ <label for="thallium">Thallium Stress Test Result:</label>
+ <input type="number" id="thallium" name="thallium" placeholder="Enter Thallium test result (e.g., 3)" required>
+ <input type="submit" value="Predict">
+ 
+
+ </form>
+ </div>
+</body>
+</html>
+
